@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LinkPreview">
+        <attr name="titleColor" format="color"/>
+        <attr name="baseurlColor" format="color"/>
+        <attr name="descColor" format="color"/>
+        <attr name="progressColor" format="color"/>
+        <attr name="imageVisible" format="boolean"/>
+        <attr name="titleVisible" format="boolean"/>
+        <attr name="descVisible" format="boolean"/>
+        <attr name="urlVisible" format="boolean"/>
+        <!--<attr name="android:orientation"/>-->
+    </declare-styleable>
+</resources>

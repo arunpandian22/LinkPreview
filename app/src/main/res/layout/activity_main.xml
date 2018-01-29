@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="nfnlab.in.linkpreviewsample.MainActivity">
+
+    <nfnlab.in.linkpreview.LinkPreview
+        android:id="@+id/lp"
+        android:layout_width="match_parent"
+        app:titleColor="@color/colorPrimaryDark"
+        app:descColor="@color/colorPrimary"
+        app:baseurlColor="@color/colorAccent"
+        android:layout_height="wrap_content">
+    </nfnlab.in.linkpreview.LinkPreview>
+
+
+    <nfnlab.in.linkpreview.LinkPreview
+        android:id="@+id/lp1"
+        android:layout_below="@id/lp"
+        android:layout_width="match_parent"
+        app:titleColor="#673AB7"
+        app:descColor="#9C27B0"
+        app:baseurlColor="#F44336"
+        android:layout_height="wrap_content">
+    </nfnlab.in.linkpreview.LinkPreview>
+
+</RelativeLayout>
