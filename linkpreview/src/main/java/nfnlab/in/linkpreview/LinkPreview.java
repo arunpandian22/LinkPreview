@@ -31,6 +31,7 @@ public class LinkPreview extends RelativeLayout {
      TextView tvLinkTitle,tvLinkDesc,tvLinkUrl;
      LinearLayout ll;
      CardView cardView;
+     StatusListener statusListener;
      @ColorInt
      int titleColor,urlColor,descColor,progressColor;
 
@@ -87,7 +88,8 @@ public class LinkPreview extends RelativeLayout {
 
     }
 
-    public void setLink(final String url){
+    public void setLink(final String url, final StatusListener statusListener){
+        this.statusListener=statusListener;
         new PreviewData(url, new MetaDataResponse() {
             @Override
             public void linkDataResponse(LinkData linkData) {
@@ -102,12 +104,14 @@ public class LinkPreview extends RelativeLayout {
                             .load(linkData.imageUrl)
                             .into(ivLink);
                 }
+                statusListener.sucess();
 
             }
 
             @Override
             public void Error(String Message) {
                 Toast.makeText(context,""+Message,Toast.LENGTH_LONG).show();
+                statusListener.failure(Message);
             }
         });
 
